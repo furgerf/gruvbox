@@ -458,7 +458,7 @@ if version >= 700
   hi! link TabLine TabLineFill
 
   " Match paired bracket under the cursor
-  call s:HL('MatchParen', s:none, s:bg3, s:bold)
+  call s:HL('MatchParen', s:none, s:yellow, s:bold)
 endif
 
 if version >= 703
@@ -472,8 +472,8 @@ if version >= 703
   call s:HL('CursorLineNr', s:yellow, s:bg1)
 endif
 
-hi! link NonText GruvboxBg2
-hi! link SpecialKey GruvboxBg2
+hi! link NonText GruvboxFg4
+hi! link SpecialKey GruvboxFg4
 
 call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
 hi! link VisualNOS Visual
@@ -519,7 +519,7 @@ call s:HL('LineNr', s:bg4, s:number_column)
 call s:HL('SignColumn', s:none, s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:gray, s:bg1, s:italic)
+call s:HL('Folded', s:blue, s:bg3, s:italic)
 " Column where folds are displayed
 call s:HL('FoldColumn', s:gray, s:bg1)
 
@@ -545,7 +545,7 @@ else
 endif
 
 call s:HL('Comment', s:gray, s:none, s:italicize_comments)
-call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
+call s:HL('Todo', s:yellow, s:bg3, s:bold . s:italic)
 call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
 
 " Generic statement
@@ -612,7 +612,7 @@ if version >= 700
   " Popup menu: normal item
   call s:HL('Pmenu', s:fg1, s:bg2)
   " Popup menu: selected item
-  call s:HL('PmenuSel', s:bg2, s:blue, s:bold)
+  call s:HL('PmenuSel', s:bg2, s:aqua, s:bold)
   " Popup menu: scrollbar
   call s:HL('PmenuSbar', s:none, s:bg2)
   " Popup menu: scrollbar thumb
@@ -642,11 +642,11 @@ if has("spell")
     call s:HL('SpellCap',   s:green, s:none, s:bold . s:italic)
   endif
   " Not recognized word
-  call s:HL('SpellBad',   s:none, s:none, s:undercurl, s:blue)
+  call s:HL('SpellBad',   s:none, s:bg2, s:undercurl, s:blue)
   " Wrong spelling for selected region
-  call s:HL('SpellLocal', s:none, s:none, s:undercurl, s:aqua)
+  call s:HL('SpellLocal', s:none, s:bg2, s:undercurl, s:aqua)
   " Rare word
-  call s:HL('SpellRare',  s:none, s:none, s:undercurl, s:purple)
+  call s:HL('SpellRare',  s:none, s:bg2, s:undercurl, s:purple)
 endif
 
 " }}}
@@ -780,7 +780,7 @@ call s:HL('CtrlPStats', s:fg4, s:bg2, s:bold)
 
 hi! link StartifyBracket GruvboxFg3
 hi! link StartifyFile GruvboxFg0
-hi! link StartifyNumber GruvboxBlue
+hi! link StartifyNumber GruvboxGreen
 hi! link StartifyPath GruvboxGray
 hi! link StartifySlash GruvboxGray
 hi! link StartifySection GruvboxYellow
