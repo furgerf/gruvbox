@@ -433,7 +433,7 @@ call s:HL('GruvboxAquaSign', s:aqua, s:sign_column, s:invert_signs)
 " General UI: {{{
 
 " Normal text
-call s:HL('Normal', s:fg1, s:bg0)
+call s:HL('Normal', s:fg1, s:bg1)
 
 " Correct background (see issue #7):
 " --- Problem with changing between dark and light on 256 color terminal
@@ -519,7 +519,7 @@ call s:HL('LineNr', s:bg4, s:number_column)
 call s:HL('SignColumn', s:none, s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:blue, s:bg3, s:italic)
+call s:HL('Folded', s:purple, s:none, s:bold)
 " Column where folds are displayed
 call s:HL('FoldColumn', s:gray, s:bg1)
 
