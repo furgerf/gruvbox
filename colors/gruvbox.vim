@@ -873,7 +873,7 @@ hi! link xmlEntityPunct GruvboxOrange
 " }}}
 " Vim: {{{
 
-call s:HL('vimCommentTitle', s:fg4_256, s:none, s:bold . s:italicize_comments)
+call s:HL('vimCommentTitle', s:fg4_256, s:bg3, s:bold . s:italicize_comments)
 
 hi! link vimNotation GruvboxOrange
 hi! link vimBracket GruvboxOrange
